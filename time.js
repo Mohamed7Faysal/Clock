@@ -11,12 +11,13 @@ function updateDate () {
     '-' +
     date.getFullYear ();
 }
-setInterval (updateDate, 100);
+setInterval (updateDate, 1000);
 onload = updateDate ();
 
 function getColor () {
   var getColor = document.getElementById ('setColor').value;
   localStorage.setItem ('color', getColor);
+  
   document.getElementById ('time').style.background = localStorage.getItem (
     'color'
   );
@@ -27,6 +28,7 @@ function getColor () {
 
 function setColor () {
   document.getElementById ('setColor').value = localStorage.getItem ('color');
+  
 
   document.getElementById ('time').style.background = localStorage.getItem (
     'color'
@@ -35,4 +37,4 @@ function setColor () {
     'color'
   );
 }
-setInterval (setColor, 100);
+setInterval (setColor, 6000);
